@@ -26,8 +26,9 @@ app.use((req,res,next) => {
 app.use('/api',router)
 
 // cors
+//https://kaleidoscopic-jalebi-2cc6e1.netlify.app/
 app.use(cors({
-    origin:'http://localhost:3000',
+    origin:'https://kaleidoscopic-jalebi-2cc6e1.netlify.app/',
     credentials:true,
 }))
 
