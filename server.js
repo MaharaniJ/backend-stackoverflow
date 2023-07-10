@@ -26,11 +26,7 @@ app.use((req,res,next) => {
 app.use('/api',router)
 
 // cors
-//https://kaleidoscopic-jalebi-2cc6e1.netlify.app
-app.use(cors({
-    origin:'https://kaleidoscopic-jalebi-2cc6e1.netlify.app',
-    credentials:true,
-}))
+app.use(cors())
 
 // listning
 app.listen(PORT , ()=>{
