@@ -28,7 +28,7 @@ app.use("/api", router);
 const corsOptions = {
   origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include 'OPTIONS' method
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders:"X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept",
 };
 
 // cors
