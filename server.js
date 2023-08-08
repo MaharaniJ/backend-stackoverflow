@@ -27,10 +27,10 @@ app.use("/api", router);
 
 // cors
 app.use(cors(
-  {
-     origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
-     redentials: true,
-   }
+//   {
+//      origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
+//      redentials: true,
+//    }
   )
 );
 // {
