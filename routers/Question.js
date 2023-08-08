@@ -47,34 +47,33 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/questionViews/:id", async (req, res) => {
+router.put('/questionViews/:id', async (req, res) => {
   try {
     const question = await Question.findById(req.params.id);
     if (!question) {
-      return res.status(404).json({ message: "Question not found" });
+      return res.status(404).json({ message: 'Question not found' });
     }
-    question.views = question.views + 1;
+    question.views = question.views +1;
     const updatedQuestion = await question.save();
     res.json(updatedQuestion);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 });
 
-router.put("/answerViews/:id", async (req, res) => {
+router.put('/answerViews/:id', async (req, res) => {
   try {
     const question = await Question.findById(req.params.id);
     if (!question) {
-      return res.status(404).json({ message: "Question not found" });
+      return res.status(404).json({ message: 'Question not found' });
     }
-    question.answers = question.answers + 1;
+    question.answers = question.answers +1;
     const updatedQuestion = await question.save();
     res.json(updatedQuestion);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 });
-
 module.exports = router;
