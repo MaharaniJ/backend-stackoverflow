@@ -29,7 +29,7 @@ app.use("/api", router);
 app.use(cors(
   {
      origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
-     redentials: true,
+     credentials: true,
    }
   )
 );
