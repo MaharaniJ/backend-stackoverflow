@@ -25,15 +25,14 @@ app.use((req, res, next) => {
 // api
 app.use("/api", router);
 
+const corsOptions = {
+  origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"], // Include 'PUT' method
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
 // cors
-app.use(cors(
-  {
-     origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
-     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-     credentials: true,
-   }
-  )
-);
+app.use(cors(corsOptions));
 
 // listning
 app.listen(PORT, () => {
