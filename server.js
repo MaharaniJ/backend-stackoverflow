@@ -26,6 +26,12 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Credentials", true);
   next();
 });
+
+router.options('/api/question/questionViews/:id', (req, res) => {
+    res.header('Access-Control-Allow-Methods', 'PUT');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.sendStatus(200);
+  });
 // api
 app.use("/api", router);
 
