@@ -29,6 +29,7 @@ app.use("/api", router);
 app.use(cors(
   {
      origin: "https://kaleidoscopic-jalebi-2cc6e1.netlify.app",
+     methods: ['GET', 'POST', 'PUT', 'DELETE'],
      credentials: true,
    }
   )
